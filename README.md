@@ -3,7 +3,7 @@
 
 <p align="center">
   <img
-    src="https://github.com/user-attachments/assets/06db60e7-40ce-45e2-91f9-e7fe495a6bf4"
+    src="./Logo.png"
     alt="Imposter Logo"
     width="300"   
   />
