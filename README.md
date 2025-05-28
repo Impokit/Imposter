@@ -11,13 +11,7 @@
 
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 
 <h1 align="center">👾 Imposter 👾</h1>
 
