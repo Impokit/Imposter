@@ -24,7 +24,7 @@
         </main>
         <footer class="text-[#4A5980] py-4 fixed bottom-10 w-full">
             <div class="container mx-auto text-center">
-                <p class="text-sm">© 2023 Imposter Game. All rights reserved.</p>
+                <p class="text-sm">© 2025 Impokit — Imposter</p>
             </div>
         </footer>
     </div>
