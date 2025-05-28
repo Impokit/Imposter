@@ -26,6 +26,10 @@ This project is licensed under the [MIT License](LICENSE).
 > Add information about the usage if needed. For example,
 >
 > This software is open source and available under the MIT License. See the [LICENSE](LICENSE) file for more information.
+>
+> We follow the [Contributor Covenant](CODE_OF_CONDUCT.md).
+> Please stick to it so that everyone has fun here. 🙌
+
 
 💡 *We appreciate all contributions! Feel free to submit a PR or open an issue.* 🎉
 
