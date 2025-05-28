@@ -1,4 +1,19 @@
-
+<p align="center">
+  <!-- Badges -->
+  <!-- Replace with actual badges -->
+  <a href="https://github.com/Impokit/Imposter" target="_blank">
+    <img src="https://img.shields.io/github/stars/Jamie-Poeffel/Chipstok?style=normal" alt="Stars Badge"/>
+  </a>
+  <a href="https://github.com/Impokit/Imposter/network/members" target="_blank">
+    <img src="https://img.shields.io/github/forks/Jamie-Poeffel/Chipstok?style=normal" alt="Forks Badge"/>
+  </a>
+  <a href="https://github.com/Impokit/Imposter/issues" target="_blank">
+    <img src="https://img.shields.io/github/issues/Jamie-Poeffel/Chipstok" alt="Issues Badge"/>
+  </a>
+  <a href="https://github.com/Impokit/Imposter/pulls" target="_blank">
+    <img src="https://img.shields.io/github/issues-pr/Jamie-Poeffel/Chipstok" alt="Pull Requests Badge"/>
+  </a>
+</p>
 <br>
 
 <p align="center">
@@ -51,20 +66,3 @@ This project is licensed under the [MIT License](LICENSE).
 
 
 💡 *We appreciate all contributions! Feel free to submit a PR or open an issue.* 🎉
-
-<p align="center">
-  <!-- Badges -->
-  <!-- Replace with actual badges -->
-  <a href="https://github.com/Impokit/Imposter" target="_blank">
-    <img src="https://img.shields.io/github/stars/Jamie-Poeffel/Chipstok?style=normal" alt="Stars Badge"/>
-  </a>
-  <a href="https://github.com/Impokit/Imposter/network/members" target="_blank">
-    <img src="https://img.shields.io/github/forks/Jamie-Poeffel/Chipstok?style=normal" alt="Forks Badge"/>
-  </a>
-  <a href="https://github.com/Impokit/Imposter/issues" target="_blank">
-    <img src="https://img.shields.io/github/issues/Jamie-Poeffel/Chipstok" alt="Issues Badge"/>
-  </a>
-  <a href="https://github.com/Impokit/Imposter/pulls" target="_blank">
-    <img src="https://img.shields.io/github/issues-pr/Jamie-Poeffel/Chipstok" alt="Pull Requests Badge"/>
-  </a>
-</p>
