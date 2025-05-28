@@ -56,10 +56,10 @@ This project is licensed under the [MIT License](LICENSE).
   <!-- Badges -->
   <!-- Replace with actual badges -->
   <a href="https://github.com/Impokit/Imposter" target="_blank">
-    <img src="https://img.shields.io/github/stars/Jamie-Poeffel/Chipstok?style=social" alt="Stars Badge"/>
+    <img src="https://img.shields.io/github/stars/Jamie-Poeffel/Chipstok?style=normal" alt="Stars Badge"/>
   </a>
   <a href="https://github.com/Impokit/Imposter/network/members" target="_blank">
-    <img src="https://img.shields.io/github/forks/Jamie-Poeffel/Chipstok?style=social" alt="Forks Badge"/>
+    <img src="https://img.shields.io/github/forks/Jamie-Poeffel/Chipstok?style=normal" alt="Forks Badge"/>
   </a>
   <a href="https://github.com/Impokit/Imposter/issues" target="_blank">
     <img src="https://img.shields.io/github/issues/Jamie-Poeffel/Chipstok" alt="Issues Badge"/>
