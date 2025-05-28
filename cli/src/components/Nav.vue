@@ -1,7 +1,7 @@
 <template>
     <nav class="fixed bottom-0 left-0 w-full z-50">
-        <div class="flex items-center justify-between px-4 py-2 bg-white shadow-md">
-            <div class="flex items-center gap-2">
+        <div class="flex items-center justify-between px-4 py-2 bg-[#001427] shadow-md">
+            <div class="flex items-center gap-2 select-none">
                 <Logo />
                 <h1 class="font-poppins text-[24px] font-extrabold tracking-[2.4px] text-[#233D75]">Imposter</h1>
             </div>
