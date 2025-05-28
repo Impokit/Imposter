@@ -1,8 +1,30 @@
 
+<br>
+
+<p align="center">
+  <img
+    src="https://github.com/user-attachments/assets/06db60e7-40ce-45e2-91f9-e7fe495a6bf4"
+    alt="Imposter Logo"
+    width="300"   
+  />
+</p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <h1 align="center">👾 Imposter 👾</h1>
 
 <h3 align="center"><strong>Guess. Reveal. Win.</strong></h3>
+
+
+
  
 
 ## Features
@@ -13,6 +35,7 @@
 - 🛠️ **Modular Components**
 - 🌐 **Plattform-unabhängig**
 - 🔒 **Self-host** 
+
 
 
 
