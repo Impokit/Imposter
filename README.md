@@ -7,7 +7,7 @@
 
 ## Features
 
-- 🎮 **Host / Join**-
+- 🎮 **Host / Join**
 - ⚡ **Realtime Multiplayer** 
 - 🖼️ **Responsive UI** 
 - 🛠️ **Modular Components**
