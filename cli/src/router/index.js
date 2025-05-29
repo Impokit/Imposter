@@ -10,7 +10,6 @@ const routes = [
     path: '/game/:gameCode',
     name: 'Game',
     component: () => import('../views/Game.vue'),
-    props: true,
   }
   // {
   // path: '/about',

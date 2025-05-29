@@ -70,7 +70,7 @@ const router = useRouter()
 const showJoinGamePopup = ref(false)
 
 function handleJoinGame() {
-    router.push({ path: `/game/${gameCode.value}` })
+    router.push({ path: `/game/${gameCode.value}`, query: { playerName: playerName.value } })
 }
 
 function handleCreateGame() {
