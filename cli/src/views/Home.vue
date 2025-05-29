@@ -15,7 +15,7 @@
                         <JoinPlus color="#ffffff" />
                         <span class="font-semibold text-[16px] text-white font-poppins">Join Game</span>
                     </button>
-                    <button @click="handleCreateGame"
+                    <button @click="showCreatPopup = true"
                         class="bg-gradient-to-r from-[#222E47] to-[#233D75] flex items-center gap-2 px-4 py-2 rounded-full active:scale-95 shadow-md hover:shadow-lg transition">
                         <PersonPlus color="#ffffff" />
                         <span class="font-semibold text-[16px] text-white font-poppins">Host a Game</span>
@@ -54,6 +54,27 @@
                 </div>
             </template>
         </popup>
+        <popup :show="showCreatPopup" @update:show="showCreatPopup = false">
+            <template #header>
+                <h3 class="text-2xl font-bold text-center text-[#A9B8D9] tracking-wide font-poppins">Join Game</h3>
+            </template>
+
+            <template #body>
+                <div class="flex flex-col gap-4 items-center mt-4">
+                    <input v-model="playerName" type="text" placeholder="Enter Your Name"
+                        class="w-64 text-center border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#4A7CFF] font-poppins" />
+                </div>
+            </template>
+
+            <template #footer>
+                <div class="flex justify-center mt-6">
+                    <button @click="handleCreateGame"
+                        class="bg-gradient-to-r from-[#4266B8] to-[#4A7CFF] px-6 py-2 rounded-full text-white font-semibold font-poppins shadow-md hover:shadow-lg transition">
+                        Join
+                    </button>
+                </div>
+            </template>
+        </popup>
     </div>
 </template>
 
@@ -68,13 +89,28 @@ const playerName = ref('')
 const gameCode = ref('')
 const router = useRouter()
 const showJoinGamePopup = ref(false)
+const showCreatPopup = ref(false)
 
 function handleJoinGame() {
     router.push({ path: `/game/${gameCode.value}`, query: { playerName: playerName.value } })
 }
 
-function handleCreateGame() {
-    console.log('Creating new game with player:', playerName.value)
+async function handleCreateGame() {
+    const res = await fetch(`${import.meta.env.VITE_APP_BACKEND_URL}/game/create/imposter`, {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: playerName.value,
+        }),
+    });
+
+    const data = await res.json();
+    if (data.type === 'success') {
+        router.push({ path: `/game/${data.gameId}`, query: { playerName: playerName.value } });
+        return;
+    }
 }
 </script>
 

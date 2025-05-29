@@ -3,27 +3,38 @@ import { games, Player, WordSector } from "../config/game";
 import { WebSocket } from "ws";
 
 export const CreateImposterGame: RequestHandler = async (req: Request, res: Response): Promise<void> => {
-    const {
-        maxPlayerCount = 20,
-        imposterCount = Math.floor(maxPlayerCount / 3),
-        hintsForImposter = true,
-        wordSector = WordSector.all,
-        gameTime = 1000 * 60 * 10,
-        TimeLimit = false,
-        hostId,
+    let {
+        maxPlayerCount,
+        imposterCount,
+        hintsForImposter,
+        wordSector,
+        gameTime,
+        TimeLimit,
         name
     } = req.body as {
-        maxPlayerCount: number,
-        imposterCount: number,
-        hintsForImposter: boolean,
-        wordSector: WordSector,
-        gameTime: number,
-        TimeLimit: boolean,
-        hostId: string,
-        name: string
+        maxPlayerCount?: number,
+        imposterCount?: number,
+        hintsForImposter?: boolean,
+        wordSector?: WordSector,
+        gameTime?: number,
+        TimeLimit?: boolean,
+        name?: string,
+    };
+
+    if (!name) {
+        res.status(406).json({ message: "Name must be given" });
+        return;
     }
 
+    maxPlayerCount = maxPlayerCount ?? 20;
+    imposterCount = imposterCount ?? Math.floor(maxPlayerCount / 3);
+    hintsForImposter = hintsForImposter ?? true;
+    wordSector = wordSector ?? WordSector.all;
+    gameTime = gameTime ?? 1000 * 60 * 10;
+    TimeLimit = TimeLimit ?? false;
+
     const gameId = Math.random().toString(36).substr(2, 6);
+    const hostId = Math.random().toString(36).substr(2, 6);
 
     const host: Player = {
         id: hostId,
@@ -37,8 +48,8 @@ export const CreateImposterGame: RequestHandler = async (req: Request, res: Resp
         phase: 'setup',
     };
 
-    res.json({ gameId, message: "success" });
-}
+    res.json({ gameId, type: "success" });
+};
 
 export const handleSocketConnection = async (socket: WebSocket) => {
     let gameId = ''
@@ -58,7 +69,9 @@ export const handleSocketConnection = async (socket: WebSocket) => {
 
             let player = game.players.find(p => p.name === playerName);
             if (player) {
-                return socket.send(JSON.stringify({ type: 'error', message: 'Name already taken' }));
+                if (player.isHost !== true) {
+                    return socket.send(JSON.stringify({ type: 'error', message: 'Name already taken' }));
+                }
             }
 
             if (!player) {

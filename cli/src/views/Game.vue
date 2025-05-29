@@ -38,7 +38,6 @@ onMounted(() => {
 
         if (data.type === 'playerJoined' || data.type === 'playerLeft') {
             players.value = data.players || []
-
         }
     }
     socket.onerror = (error) => {
