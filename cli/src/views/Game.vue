@@ -50,7 +50,6 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
     if (socket) {
-        socket.send(JSON.stringify({ type: 'exitGame', gameId: gameCode.value, playerName: playerName.value }))
         socket.close()
     }
 })
