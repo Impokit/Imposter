@@ -33,10 +33,39 @@
 <h3 align="center"><strong>Guess. Reveal. Win.</strong></h3>
 
 <br>
-<br><br>
+<br>
+<br>
 <br>
 
- 
+
+## 🎲 How to Play
+
+1. create or join **lobby**  
+   - 3 - 20 players -> approx. ⅓ of the players are Imposters **(rule of thumb)**
+
+2. **The secret word**  
+   - Before the round starts, **every crewmate** gets the same word.  
+   - The Imposters see **only a hint** (e.g. “it's an animal”).  
+
+3. **2 rounds of conversation**  
+   - In turn, each person says **one** sentence that describes the word without giving it away.  
+   - Observe who sounds funny - the Imposters often guess into the blue.  
+
+4. **Vote phase**  
+   - Voting takes place after 2 rounds.  
+   - Whoever gets the most votes is eliminated.
+   - After the vote, everyone sees whether the eliminated player was an Imposter. 
+
+5. **Wining conditions**  
+   - **Crew wins** if **all imposters** have been voted out.  
+   - **Imposters win** if **at least one imposter** is the last one left.  
+
+
+
+
+
+
+---
 
 ## Features
 
@@ -44,8 +73,8 @@
 - ⚡ **Realtime Multiplayer** 
 - 🖼️ **Responsive UI** 
 - 🛠️ **Modular Components**
-- 🌐 **Plattform-unabhängig**
-- 🔒 **Self-host** 
+- 🌐 **Plattform-independent**
+- 🔒 **Self-host**
 
 
 
