@@ -1,5 +1,5 @@
 <template>
-    <div id="game" class="p-6 bg-gray-900 min-h-screen text-gray-100">
+    <div id="game" class="p-6 min-h-screen text-gray-100">
         <div class="text-lg font-semibold mb-4">
             Game Code: <span class="font-mono text-green-400">{{ gameCode }}</span>
         </div>
