@@ -1,5 +1,5 @@
 <template>
-    <div id="game" class="p-6 min-h-screen text-gray-100">
+    <div v-if="phase === 'setup'" id="lobby" class="p-6 min-h-screen text-gray-100">
         <div class="text-lg font-semibold mb-4">
             Game Code: <span class="font-mono text-green-400">{{ gameCode }}</span>
         </div>
@@ -15,6 +15,9 @@
             </div>
         </div>
     </div>
+    <div id="selection">
+
+    </div>
 </template>
 
 <script setup>
@@ -24,6 +27,7 @@ import { useRoute } from 'vue-router'
 const gameCode = ref(useRoute().params.gameCode || '')
 const playerName = ref(useRoute().query.playerName || 'Error');
 const players = ref([])
+const phase = ref('setup')
 
 let socket = null
 
@@ -36,8 +40,14 @@ onMounted(() => {
         const data = JSON.parse(event.data)
         console.log('Received:', data)
 
-        if (data.type === 'playerJoined' || data.type === 'playerLeft') {
-            players.value = data.players || []
+        switch (data.type) {
+            case 'playerJoined' || 'playerLeft': {
+                players.value = data.players || []
+                break;
+            }
+            case 'changePhase': {
+                phase.value = data.phase
+            }
         }
     }
     socket.onerror = (error) => {

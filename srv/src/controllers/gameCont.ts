@@ -114,7 +114,27 @@ export const handleSocketConnection = async (socket: WebSocket) => {
             const host = game?.players.find(p => p.id === playerId);
             if (host?.isHost) {
                 game.phase = 'chat';
-                broadcast(gameId, { type: 'chatStarted' });
+                broadcast(gameId, { type: 'changePhase', phase: game.phase });
+            }
+        }
+
+        if (msg.type === 'startSelection' && gameId) {
+            const game = games[gameId];
+            const host = game?.players.find(p => p.id === playerId);
+
+            if (host?.isHost) {
+                game.phase = 'selection';
+                broadcast(gameId, { type: 'changePhase', phase: game.phase });
+            }
+        }
+
+        if (msg.type === 'startVoting' && gameId) {
+            const game = games[gameId];
+            const host = game?.players.find(p => p.id === playerId);
+
+            if (host?.isHost) {
+                game.phase = 'voting';
+                broadcast(gameId, { type: 'changePhase', phase: game.phase });
             }
         }
     });
