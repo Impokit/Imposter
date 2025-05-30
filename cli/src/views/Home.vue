@@ -146,27 +146,37 @@
         </div>
       </template>
     </popup>
-        <popup :show="showCreatPopup" @update:show="showCreatPopup = false">
-            <template #header>
-                <h3 class="text-2xl font-bold text-center text-[#A9B8D9] tracking-wide font-poppins">Join Game</h3>
-            </template>
+    <popup :show="showCreatPopup" @update:show="showCreatPopup = false">
+      <template #header>
+        <h3
+          class="text-2xl font-bold text-center text-[#A9B8D9] tracking-wide font-poppins"
+        >
+          Join Game
+        </h3>
+      </template>
 
-            <template #body>
-                <div class="flex flex-col gap-4 items-center mt-4">
-                    <input v-model="playerName" type="text" placeholder="Enter Your Name"
-                        class="w-64 text-center border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#4A7CFF] font-poppins" />
-                </div>
-            </template>
+      <template #body>
+        <div class="flex flex-col gap-4 items-center mt-4">
+          <input
+            v-model="playerName"
+            type="text"
+            placeholder="Enter Your Name"
+            class="w-64 text-center border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#4A7CFF] font-poppins"
+          />
+        </div>
+      </template>
 
-            <template #footer>
-                <div class="flex justify-center mt-6">
-                    <button @click="handleCreateGame"
-                        class="bg-gradient-to-r from-[#4266B8] to-[#4A7CFF] px-6 py-2 rounded-full text-white font-semibold font-poppins shadow-md hover:shadow-lg transition">
-                        Join
-                    </button>
-                </div>
-            </template>
-        </popup>
+      <template #footer>
+        <div class="flex justify-center mt-6">
+          <button
+            @click="handleCreateGame"
+            class="bg-gradient-to-r from-[#4266B8] to-[#4A7CFF] px-6 py-2 rounded-full text-white font-semibold font-poppins shadow-md hover:shadow-lg transition"
+          >
+            Join
+          </button>
+        </div>
+      </template>
+    </popup>
   </div>
 </template>
 
