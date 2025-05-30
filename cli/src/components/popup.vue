@@ -1,19 +1,14 @@
 <template>
-    <div v-if="show" class="fixed inset-0 bg-white  bg-opacity-50 flex items-center justify-center"
+    <div v-if="show" class="fixed inset-0 bg-[#03071e] bg-opacity-50 flex items-center justify-center"
         style="z-index: 1000;" @click.self="onMaskClick">
         <transition name="fade">
-            <div class="bg-[#03071e] rounded-lg shadow-lg w-full max-w-md">
-                <div class="border-b p-4 flex justify-between items-center">
+            <div class="bg-[#03071e] text-white rounded-lg shadow-lg w-full border border-gray-800 max-w-md">
+                <div class="p-4 flex justify-center gap- items-center">
                     <slot name="header" />
-                    <button v-if="closable" @click="close" class="text-gray-500 text-xl font-bold">&times;</button>
                 </div>
 
                 <div class="p-4">
                     <slot name="body" />
-                </div>
-
-                <div class="border-t p-4 flex justify-end">
-                    <slot name="footer" />
                 </div>
             </div>
         </transition>
@@ -30,7 +25,7 @@ const props = defineProps({
     maskClosable: {
         type: Boolean,
         default: true,
-    },
+    }
 });
 const emit = defineEmits(['update:show']);
 
