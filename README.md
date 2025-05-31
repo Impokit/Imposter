@@ -58,23 +58,7 @@
 
 5. **Wining conditions**  
    - **Crew wins** if **all imposters** have been voted out.  
-   - **Imposters win** if **at least one imposter** is the last one left.  
-
-
-
-
-
-
----
-
-## Features
-
-- 🎮 **Host / Join**
-- ⚡ **Realtime Multiplayer** 
-- 🖼️ **Responsive UI** 
-- 🛠️ **Modular Components**
-- 🌐 **Plattform-independent**
-- 🔒 **Self-host**
+   - **Imposters win** if **at least one imposter** is the last one 
 
 
 
