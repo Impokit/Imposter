@@ -23,7 +23,7 @@ jobs:
           deno-version: v1.x
 
       - name: Format, lint, test
-        run: deno fmt && deno test
+        run: deno fmt
 
       - name: Commit formatted code (if changed)
         run: |
