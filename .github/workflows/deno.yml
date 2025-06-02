@@ -10,7 +10,7 @@ permissions:
   contents: write  # Needed to commit changes
 
 jobs:
-  test:
+  format:
     runs-on: ubuntu-latest
 
     steps:
