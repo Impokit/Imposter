@@ -22,8 +22,9 @@ jobs:
         with:
           deno-version: v1.x
 
-      - name: Format code
-        run: deno fmt
+      - name: Format, lint, test
+      - uses: denoland/setup-deno@v1
+      - run: deno fmt && deno lint && deno test
 
       - name: Commit formatted code (if changed)
         run: |
