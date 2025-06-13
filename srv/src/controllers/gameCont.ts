@@ -97,6 +97,7 @@ export const handleSocketConnection = async (socket: WebSocket) => {
         }
 
         game.players.push(player);
+        console.log(game)
       }
 
       (player as any).socket = socket;
@@ -169,13 +170,13 @@ function broadcast(gameId: string, msg: any) {
   const game = games[gameId];
   if (!game) return;
   const host = game.players.find((p) => p.isHost === true);
-  let message = JSON.stringify({ msg });
   game.players.forEach((p) => {
-    if (p.isHost == true) {
+    let message;
+    if (p.isHost === true) {
       message = JSON.stringify({ msg, isHost: true, host });
-      p.socket?.send(message);
     } else {
-      p.socket?.send(message);
+      message = JSON.stringify({ msg });
     }
+    p.socket?.send(message);
   });
 }
