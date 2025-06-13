@@ -45,7 +45,7 @@ export const CreateImposterGame: RequestHandler = async (
     isHost: true,
     config: {
       role: null,
-    }
+    },
   };
 
   games[gameId] = {
@@ -58,8 +58,8 @@ export const CreateImposterGame: RequestHandler = async (
       hintsForImposter: hintsForImposter,
       wordSector: wordSector,
       gameTime: gameTime,
-      TimeLimit: TimeLimit
-    }
+      TimeLimit: TimeLimit,
+    },
   };
 
   res.json({ gameId, type: "success" });

@@ -3,8 +3,8 @@ export interface Player {
   name: string;
   socket?: WebSocket;
   config: {
-    role?: PlayerRole | null,
-  }
+    role?: PlayerRole | null;
+  };
   isHost: boolean;
 }
 
@@ -13,19 +13,19 @@ export interface Game {
   players: Player[];
   phase: "setup" | "selection" | "chat" | "voting";
   config: {
-    imposterCount: number,
-    maxPlayerCount: number,
-    hintsForImposter: boolean,
-    wordSector: WordSector,
-    gameTime: number,
-    TimeLimit: boolean
-  }
+    imposterCount: number;
+    maxPlayerCount: number;
+    hintsForImposter: boolean;
+    wordSector: WordSector;
+    gameTime: number;
+    TimeLimit: boolean;
+  };
 }
 
 export enum PlayerRole {
   "innocent",
   "imposter",
-  "ejected"
+  "ejected",
 }
 
 export enum WordSector {
