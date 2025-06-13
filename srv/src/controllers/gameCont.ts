@@ -97,7 +97,7 @@ export const handleSocketConnection = async (socket: WebSocket) => {
         }
 
         game.players.push(player);
-        console.log(game)
+        console.log(game);
       }
 
       (player as any).socket = socket;
