@@ -43,12 +43,23 @@ export const CreateImposterGame: RequestHandler = async (
     id: hostId,
     name,
     isHost: true,
+    config: {
+      role: null,
+    }
   };
 
   games[gameId] = {
     id: gameId,
     players: [host],
     phase: "setup",
+    config: {
+      imposterCount: imposterCount,
+      maxPlayerCount: maxPlayerCount,
+      hintsForImposter: hintsForImposter,
+      wordSector: wordSector,
+      gameTime: gameTime,
+      TimeLimit: TimeLimit
+    }
   };
 
   res.json({ gameId, type: "success" });
